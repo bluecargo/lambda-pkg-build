@@ -1,11 +1,13 @@
 FROM lambci/lambda:build-python3.6
-
-RUN mkdir /app
-COPY docker-lambda-with-virtual.sh /app/.
-COPY requirements.txt /app
-
-# Set the default directory where CMD will execute
-WORKDIR /app
+WORKDIR /
 CMD ["/bin/bash"]
 
-RUN ./docker-lambda-with-virtual.sh
+COPY requirements.txt / \
+    install_and_strip.sh / \
+    export_zip.sh /
+
+ENV LAMBDA_BUILD /lambda_build
+
+RUN bash install_and_strip.sh
+
+RUN bash export_zip.sh
