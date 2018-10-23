@@ -1,7 +1,7 @@
 # lambda-pkg-build
 Python 3.6 packages for AWS lambda.
 
-# Dependencies7
+# Dependencies
 Docker
 
 # How to run it
