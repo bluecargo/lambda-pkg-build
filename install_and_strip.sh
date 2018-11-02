@@ -11,7 +11,7 @@ pip list
 SITE_PACKAGES=$LAMBDA_BUILD/lib/python3.6/site-packages
 echo "original size $(du -sh $VIRTUAL_ENV | cut -f1)"
 find $SITE_PACKAGES -name "tests*"| xargs rm -r
-find $SITE_PACKAGES -name "dataset*" | xargs rm -r
+find $SITE_PACKAGES -name "dataset*" ! -name "*.py" | xargs rm -r
 
 # Can't remove tests files from pandas
 pushd $SITE_PACKAGES/scipy/.libs && \
@@ -27,3 +27,5 @@ find $SITE_PACKAGES -name "*.so" | grep -v ufuncs | grep -v fblas | grep -v flap
 find $SITE_PACKAGES -name "*.pyc" -delete
 find $SITE_PACKAGES -type d -empty -delete
 echo "current size $(du -sh $VIRTUAL_ENV | cut -f1)"
+
+pip list
