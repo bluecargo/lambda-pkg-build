@@ -4,18 +4,18 @@ SITE_PACKAGES=$LAMBDA_BUILD/lib/python3.6/site-packages
 pushd $SITE_PACKAGES
 
 zip -r -9 -q $LAMBDA_BUILD/completer.zip \
-        urllib3 requests idna certifi chardet pytz googlemaps
+        urllib3 requests idna certifi chardet pytz googlemaps bugsnag
 
 zip -r -9 -q $LAMBDA_BUILD/parser.zip \
-        urllib3 requests idna chardet certifi chardet pdfminer simplejson pandas pandas xlrd
+        urllib3 requests idna chardet certifi chardet pdfminer simplejson pandas pandas xlrd bugsnag
 
 zip -r -9 -q $LAMBDA_BUILD/predictor.zip \
-        urllib3 requests idna chardet certifi pytz numpy scipy sklearn xgboost
+        urllib3 requests idna chardet certifi pytz numpy scipy sklearn xgboost bugsnag
 
 zip -r -9 -q $LAMBDA_BUILD/placement.zip \
-        urllib3 requests idna chardet certifi pytz numpy pandas
+        urllib3 requests idna chardet certifi pytz numpy pandas bugsnag
 
 zip -r -9 -q $LAMBDA_BUILD/soget_processor.zip \
-        urllib3 requests idna certifi chardet pytz googlemaps xmltodict
+        urllib3 requests idna certifi chardet pytz googlemaps xmltodict bugsnag
 
 popd

@@ -13,3 +13,4 @@ pdfminer.six
 xmltodict
 pytest==3.2.3
 mock==2.0.0
+bugsnag
