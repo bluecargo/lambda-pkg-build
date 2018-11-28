@@ -21,4 +21,7 @@ zip -r -9 -q $LAMBDA_BUILD/soget_processor.zip \
 zip -r -9 -q $LAMBDA_BUILD/weather.zip \
         numpy urllib3 requests idna chardet certifi bugsnag
 
+zip -r -9 -q $LAMBDA_BUILD/placer.zip \
+        numpy urllib3 requests idna chardet certifi bugsnag  # TODO: combine this one with placement when we merge the repos!
+
 popd
