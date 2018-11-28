@@ -11,6 +11,10 @@ Ask an [admin](mailto:admin@bluecargo.io) to get access and be able to pull/push
 ## How to run it
 ./build.sh
 
+
+## How to check the image
+docker run -v $pwd/outputs -it bluecargo/lambda /bin/bash
+
 #### References ####
 * https://serverlesscode.com/post/deploy-scikitlearn-on-lamba/
 * https://github.com/lambci/docker-lambda
