@@ -16,7 +16,7 @@ zip -r -9 -q $LAMBDA_BUILD/placement.zip \
         urllib3 requests idna chardet certifi pytz numpy pandas bugsnag
 
 zip -r -9 -q $LAMBDA_BUILD/soget_processor.zip \
-        urllib3 requests idna certifi chardet xmltodict bugsnag
+        xmltodict xmltodict.py urllib3 requests idna certifi chardet bugsnag
 
 zip -r -9 -q $LAMBDA_BUILD/weather.zip \
         numpy urllib3 requests idna chardet certifi bugsnag
